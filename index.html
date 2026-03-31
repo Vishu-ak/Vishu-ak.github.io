@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishnu Kumar A.K. — Software Engineer</title>
+  <meta name="description" content="Software Engineer with expertise in distributed systems, real-time processing, and full-stack development. M.S. Software Engineering, Arizona State University.">
+  <meta property="og:title" content="Vishnu Kumar A.K. — Software Engineer">
+  <meta property="og:description" content="Distributed systems, real-time processing, full-stack development.">
+
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Inline critical: set theme before first paint -->
+  <script>
+    (function(){
+      var d = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', d);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="Vishnu Kumar home">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="28" height="28" rx="6" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M9 10L16 22L23 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="16" cy="16" r="2" fill="currentColor"/>
+        </svg>
+        <span>vishnu.dev</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:var(--space-3)">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch color theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <div class="hero__badge">
+        <span class="pulse"></span>
+        Open to full-time opportunities
+      </div>
+      <h1 class="hero__name">Vishnu Kumar<br><span class="highlight">A.K.</span></h1>
+      <p class="hero__tagline">Software Engineer specializing in distributed systems, real-time processing, and fault-tolerant architecture. M.S. candidate at Arizona State University, graduating May 2026.</p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          View Projects
+        </a>
+        <a href="#contact" class="btn btn--outline">
+          Get In Touch
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <div class="stat__number">2+</div>
+          <div class="stat__label">Years Experience</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number">3.67</div>
+          <div class="stat__label">GPA (M.S.)</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number">8+</div>
+          <div class="stat__label">Projects Built</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number">6+</div>
+          <div class="stat__label">Languages</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="fade-in">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">// About</div>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__text">
+          <p>I'm a Software Engineer graduating with a Master's in Software Engineering from Arizona State University in May 2026. I design and build multi-threaded, fault-tolerant systems that handle real-time data at scale.</p>
+          <p>With hands-on experience in distributed backend services, full-stack feature delivery, and real-time data processing, I bring a systems-first mindset to every problem. I've optimized memory management under high concurrency, built scalable data pipelines, and delivered production features across React, Python, and Java stacks.</p>
+          <p>Based in Phoenix, AZ — ready to contribute from day one, no relocation needed.</p>
+        </div>
+        <div class="about__info-cards">
+          <div class="info-card">
+            <div class="info-card__icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="info-card__label">Name</div>
+            <div class="info-card__value">Vishnu Kumar A.K.</div>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="info-card__label">Location</div>
+            <div class="info-card__value">Phoenix, AZ</div>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
+            </div>
+            <div class="info-card__label">Education</div>
+            <div class="info-card__value">M.S. ASU, 2026</div>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="info-card__label">Email</div>
+            <div class="info-card__value">vadhilak@asu.edu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="fade-in">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">// Skills</div>
+        <h2 class="section-title">Technical Expertise</h2>
+        <p class="section-subtitle">Core competencies spanning systems programming, distributed computing, and full-stack engineering.</p>
+      </div>
+      <div class="skills__grid">
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="skill-card__title">Languages</h3>
+          <p class="skill-card__desc">Proficient across systems and application languages with strong typing discipline.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="skill-card__title">Systems & Real-Time</h3>
+          <p class="skill-card__desc">Building concurrent, fault-tolerant systems with strict latency requirements.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Multi-threading</span>
+            <span class="skill-tag">Real-Time Control</span>
+            <span class="skill-tag">Concurrent Systems</span>
+            <span class="skill-tag">Low-Latency</span>
+            <span class="skill-tag">Fault Tolerance</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <h3 class="skill-card__title">Tools & Platforms</h3>
+          <p class="skill-card__desc">Modern DevOps workflows with cloud-native tooling and agile methodologies.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">gRPC</span>
+            <span class="skill-tag">Agile/Scrum</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="fade-in">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">// Experience</div>
+        <h2 class="section-title">Where I've Worked</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__header">
+            <div>
+              <div class="timeline__role">Software Engineer — Distributed Systems</div>
+              <div class="timeline__company">Arizona State University</div>
+            </div>
+            <div class="timeline__meta">Apr 2025 — Present &middot; Tempe, AZ</div>
+          </div>
+          <ul class="timeline__bullets" role="list">
+            <li>Architect fault-tolerant, multi-threaded Java backend services for high-throughput concurrent workloads, applying parallel programming and synchronization patterns.</li>
+            <li>Debug and resolve complex system-level software issues via network instrumentation and request tracing; maintain architecture specifications and design documents.</li>
+            <li>Evaluate system design trade-offs to optimize memory management and ensure low-latency data processing across distributed nodes under high concurrency.</li>
+            <li>Develop and maintain RESTful APIs for data communications between distributed services and client applications.</li>
+          </ul>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__header">
+            <div>
+              <div class="timeline__role">Full Stack Engineer Intern</div>
+              <div class="timeline__company">Morozko Forge</div>
+            </div>
+            <div class="timeline__meta">Oct 2025 — Present &middot; Phoenix, AZ</div>
+          </div>
+          <ul class="timeline__bullets" role="list">
+            <li>Own end-to-end development of production features in React, Python, and SQL; triage and resolve escalated software issues with root-cause analysis.</li>
+            <li>Build scalable data pipelines integrating operational dashboards with cloud APIs, automating workflows and cutting manual processing overhead by 40%.</li>
+            <li>Collaborate cross-functionally with business and engineering stakeholders to translate requirements into reliable software solutions.</li>
+          </ul>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__header">
+            <div>
+              <div class="timeline__role">Software Engineer Intern</div>
+              <div class="timeline__company">Sify Technologies</div>
+            </div>
+            <div class="timeline__meta">Sep 2023 — Dec 2023 &middot; Chennai, India</div>
+          </div>
+          <ul class="timeline__bullets" role="list">
+            <li>Optimized SQL database queries and implemented backend features for an enterprise-scale platform.</li>
+            <li>Contributed to code reviews, regression testing, and structured software documentation practices.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="fade-in">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">// Projects</div>
+        <h2 class="section-title">What I've Built</h2>
+        <p class="section-subtitle">A mix of systems engineering, real-time processing, and full-stack projects.</p>
+      </div>
+      <div class="projects__grid">
+
+        <div class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            </div>
+            <span class="project-card__status">Active</span>
+          </div>
+          <h3 class="project-card__title">Real-Time Hardware Sensor Aggregator</h3>
+          <p class="project-card__desc">Multi-threaded C++ application ingesting concurrent sensor data streams using interrupt-driven and event-based programming. Features thread-safe data structures, synchronization primitives, and a live GUI for monitoring sensor state with configurable alerts.</p>
+          <div class="project-card__tech">
+            <span class="tech-badge">C++</span>
+            <span class="tech-badge">Multi-threading</span>
+            <span class="tech-badge">GUI</span>
+            <span class="tech-badge">Interrupt-Driven</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <span class="project-card__status">Active</span>
+          </div>
+          <h3 class="project-card__title">High-Frequency Execution Engine</h3>
+          <p class="project-card__desc">Real-time execution engine processing high-volume data streams under strict latency constraints. Built with fault-tolerance mechanisms ensuring stable operation during extreme data volatility, analogous to SEMI equipment reliability standards.</p>
+          <div class="project-card__tech">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Real-Time Systems</span>
+            <span class="tech-badge">Low-Latency</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <span class="project-card__status">Active</span>
+          </div>
+          <h3 class="project-card__title">Distributed Inference Pipeline</h3>
+          <p class="project-card__desc">Distributed pipeline with gRPC inter-service communication, load balancing across worker nodes, and fault recovery logic. Reinforces multi-threaded networked systems fundamentals applicable to equipment software integration.</p>
+          <div class="project-card__tech">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">C++</span>
+            <span class="tech-badge">gRPC</span>
+            <span class="tech-badge">Docker</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <span class="project-card__status">Completed</span>
+          </div>
+          <h3 class="project-card__title">Cross-Platform Analytics Dashboard</h3>
+          <p class="project-card__desc">Responsive GUI application visualizing complex real-time metrics with focus on performance and maintainability. Component architecture designed to support rapid feature iteration across multiple data views.</p>
+          <div class="project-card__tech">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">TypeScript</span>
+            <span class="tech-badge">Scalable Arch</span>
+          </div>
+        </div>
+
+        <!-- BONUS PROJECTS -->
+        <div class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="project-card__status">Completed</span>
+          </div>
+          <h3 class="project-card__title">Secure Microservices Auth Gateway</h3>
+          <p class="project-card__desc">JWT-based authentication gateway with rate limiting, role-based access control, and circuit breaker patterns. Handles 10K+ concurrent requests with Redis session caching and observability via structured logging and distributed tracing.</p>
+          <div class="project-card__tech">
+            <span class="tech-badge">Java</span>
+            <span class="tech-badge">Spring Boot</span>
+            <span class="tech-badge">Redis</span>
+            <span class="tech-badge">Docker</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <span class="project-card__status">Completed</span>
+          </div>
+          <h3 class="project-card__title">Cloud-Native Log Aggregation System</h3>
+          <p class="project-card__desc">Containerized log aggregation system collecting, parsing, and indexing application logs from distributed microservices. Features real-time search with a custom query DSL, anomaly detection alerts, and a React-based dashboard for log exploration.</p>
+          <div class="project-card__tech">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Docker</span>
+            <span class="tech-badge">WebSockets</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section id="education" class="fade-in">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">// Education</div>
+        <h2 class="section-title">Academic Background</h2>
+      </div>
+      <div class="education__grid">
+        <div class="edu-card">
+          <div class="edu-card__degree">M.S. Software Engineering</div>
+          <div class="edu-card__school">Arizona State University</div>
+          <div class="edu-card__meta">Aug 2024 — May 2026 &middot; Tempe, AZ</div>
+          <p class="edu-card__detail">Focus: Distributed Systems, Real-Time Systems, Scalable Software Architecture</p>
+          <div class="edu-card__gpa">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            GPA: 3.67 / 4.0
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-card__degree">B.E. Computer & Communication Engineering</div>
+          <div class="edu-card__school">Anna University</div>
+          <div class="edu-card__meta">2020 — 2024 &middot; Chennai, India</div>
+          <p class="edu-card__detail">Strong foundation in computer science fundamentals, algorithms, data structures, and communication systems.</p>
+          <div class="edu-card__gpa">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            GPA: 3.80 / 4.0
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact fade-in">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="section-label" style="text-align:center">// Contact</div>
+        <h2 class="section-title" style="text-align:center">Let's Connect</h2>
+        <p class="section-subtitle" style="text-align:center;margin-inline:auto;margin-top:var(--space-3)">Open to software engineering roles — especially in distributed systems, backend engineering, and systems programming.</p>
+        <div class="contact__links">
+          <a href="mailto:vadhilak@asu.edu" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            vadhilak@asu.edu
+          </a>
+          <a href="tel:480-546-2768" class="contact-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            480-546-2768
+          </a>
+          <a href="https://linkedin.com/in/vishnu-kumar-ak" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">Designed & built by <span>Vishnu Kumar A.K.</span> &middot; 2026</p>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    // ---- Theme Toggle ----
+    (function(){
+      var toggle = document.querySelector('[data-theme-toggle]');
+      var root = document.documentElement;
+      var current = root.getAttribute('data-theme') || 'light';
+
+      function updateIcon() {
+        if (current === 'dark') {
+          toggle.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+        } else {
+          toggle.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+        }
+        toggle.setAttribute('aria-label', 'Switch to ' + (current === 'dark' ? 'light' : 'dark') + ' mode');
+      }
+
+      updateIcon();
+
+      toggle.addEventListener('click', function() {
+        current = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', current);
+        updateIcon();
+      });
+    })();
+
+    // ---- Mobile Menu ----
+    (function(){
+      var btn = document.querySelector('.mobile-toggle');
+      var nav = document.getElementById('mobileNav');
+      var links = nav.querySelectorAll('a');
+
+      btn.addEventListener('click', function() {
+        btn.classList.toggle('active');
+        nav.classList.toggle('active');
+        btn.setAttribute('aria-expanded', nav.classList.contains('active'));
+        document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+      });
+
+      links.forEach(function(link) {
+        link.addEventListener('click', function() {
+          btn.classList.remove('active');
+          nav.classList.remove('active');
+          btn.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+
+    // ---- Scroll-aware Nav ----
+    (function(){
+      var nav = document.querySelector('.nav');
+      var lastY = 0;
+      var ticking = false;
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            var y = window.scrollY;
+            if (y > 100 && y > lastY) {
+              nav.classList.add('nav--hidden');
+            } else {
+              nav.classList.remove('nav--hidden');
+            }
+            lastY = y;
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    })();
+
+    // ---- JS Scroll Reveal (fallback for browsers without scroll-driven animations) ----
+    (function(){
+      if (CSS.supports && CSS.supports('animation-timeline', 'scroll()')) return;
+
+      var els = document.querySelectorAll('.fade-in');
+      els.forEach(function(el) {
+        el.classList.remove('fade-in');
+        el.classList.add('js-reveal');
+      });
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      document.querySelectorAll('.js-reveal').forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+
+    // ---- Smooth anchor scrolling ----
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ---- Typing effect on hero badge (subtle) ----
+    (function(){
+      var badge = document.querySelector('.hero__badge');
+      if (!badge) return;
+      badge.style.opacity = '0';
+      badge.style.transform = 'translateY(10px)';
+      badge.style.transition = 'opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1)';
+      setTimeout(function(){
+        badge.style.opacity = '1';
+        badge.style.transform = 'translateY(0)';
+      }, 300);
+    })();
+
+    // ---- Stagger hero stats ----
+    (function(){
+      var stats = document.querySelectorAll('.hero__stats .stat');
+      stats.forEach(function(stat, i) {
+        stat.style.opacity = '0';
+        stat.style.transform = 'translateY(15px)';
+        stat.style.transition = 'opacity 0.5s cubic-bezier(0.16,1,0.3,1), transform 0.5s cubic-bezier(0.16,1,0.3,1)';
+        setTimeout(function(){
+          stat.style.opacity = '1';
+          stat.style.transform = 'translateY(0)';
+        }, 600 + (i * 100));
+      });
+    })();
+  </script>
+
+</body>
+</html>
