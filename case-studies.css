@@ -1,0 +1,113 @@
+/* ============================================================
+   Case studies, interactive diagrams, and layout corrections
+   ============================================================ */
+
+/* ---- HERO: kill the dead space under the stats ---- */
+.hero {
+  min-height: auto;
+  padding-top: clamp(6rem, 14vh, 9rem);
+  padding-bottom: clamp(3rem, 8vh, 5rem);
+}
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-6) var(--space-10);
+}
+
+/* ---- Project cards become affordances ---- */
+.project-card[data-case] {
+  cursor: pointer;
+  position: relative;
+  transition: transform var(--transition-interactive), border-color var(--transition-interactive);
+}
+.project-card[data-case]:hover,
+.project-card[data-case]:focus-visible { transform: translateY(-4px); border-color: var(--color-primary); }
+.project-card__cta {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  margin-top: var(--space-5);
+  font-family: var(--font-mono); font-size: var(--text-xs);
+  color: var(--color-primary); letter-spacing: .04em;
+}
+.project-card__cta svg { transition: transform var(--transition-interactive); }
+.project-card[data-case]:hover .project-card__cta svg { transform: translateX(4px); }
+
+/* dimmed when a skill filter excludes it */
+.project-card.is-dimmed { opacity: .28; filter: saturate(.3); }
+.project-card.is-match { border-color: var(--color-primary); }
+
+.skill-tag[data-filter] { cursor: pointer; transition: all var(--transition-interactive); }
+.skill-tag[data-filter]:hover, .skill-tag[data-filter]:focus-visible {
+  color: var(--color-primary); border-color: var(--color-primary); transform: translateY(-2px);
+}
+.filter-bar {
+  display: none; align-items: center; gap: var(--space-3); flex-wrap: wrap;
+  margin-bottom: var(--space-8); font-family: var(--font-mono); font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+.filter-bar.is-active { display: flex; }
+.filter-bar__clear {
+  background: none; border: 1px solid var(--color-border); color: var(--color-text);
+  border-radius: var(--radius-full); padding: var(--space-1) var(--space-3);
+  cursor: pointer; font-family: var(--font-mono); font-size: var(--text-xs);
+}
+.filter-bar__clear:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+/* ---- Modal ---- */
+.cs-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: color-mix(in oklab, var(--color-bg) 80%, black);
+  backdrop-filter: blur(10px);
+  opacity: 0; pointer-events: none; transition: opacity 240ms var(--ease-out);
+  overflow-y: auto; padding: var(--space-8) var(--space-4);
+}
+.cs-overlay.is-open { opacity: 1; pointer-events: auto; }
+.cs-panel {
+  max-width: var(--content-wide); margin: 0 auto;
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl); padding: clamp(1.5rem, 4vw, 3.5rem);
+  transform: translateY(24px) scale(.99); opacity: 0;
+  transition: transform 320ms var(--ease-out), opacity 320ms var(--ease-out);
+}
+.cs-overlay.is-open .cs-panel { transform: none; opacity: 1; }
+.cs-close {
+  position: sticky; top: 0; float: right; margin-left: var(--space-4);
+  width: 40px; height: 40px; border-radius: var(--radius-full);
+  border: 1px solid var(--color-border); background: var(--color-surface);
+  color: var(--color-text); cursor: pointer; display: grid; place-items: center;
+}
+.cs-close:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.cs-eyebrow { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-primary); letter-spacing: .1em; text-transform: uppercase; }
+.cs-title { font-family: var(--font-display); font-size: var(--text-2xl); line-height: 1.05; margin: var(--space-3) 0 var(--space-4); }
+.cs-tagline { color: var(--color-text-muted); font-size: var(--text-lg); max-width: 62ch; }
+.cs-section { margin-top: var(--space-12); }
+.cs-section h3 {
+  font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: .12em;
+  text-transform: uppercase; color: var(--color-text-faint); margin-bottom: var(--space-4);
+}
+.cs-section p, .cs-section li { color: var(--color-text-muted); line-height: 1.75; max-width: 72ch; }
+.cs-list { list-style: none; display: grid; gap: var(--space-3); }
+.cs-list li { position: relative; padding-left: var(--space-6); }
+.cs-list li::before { content: "▸"; position: absolute; left: 0; color: var(--color-primary); }
+.cs-decisions { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.cs-decision { border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5); background: var(--color-surface-2); }
+.cs-decision__q { font-weight: 600; color: var(--color-text); margin-bottom: var(--space-2); }
+.cs-metrics { display: grid; gap: var(--space-6); grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+.cs-metric__n { font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-primary); }
+.cs-metric__l { font-size: var(--text-xs); color: var(--color-text-muted); font-family: var(--font-mono); }
+.cs-stack { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+/* ---- Animated architecture diagram ---- */
+.cs-diagram { width: 100%; overflow-x: auto; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface-2); padding: var(--space-6); }
+.cs-diagram svg { width: 100%; min-width: 680px; height: auto; display: block; }
+.dg-node { fill: var(--color-surface); stroke: var(--color-border); stroke-width: 1.5; }
+.dg-node--accent { stroke: var(--color-primary); }
+.dg-label { font-family: var(--font-body); font-size: 13px; font-weight: 600; fill: var(--color-text); }
+.dg-sub { font-family: var(--font-mono); font-size: 10px; fill: var(--color-text-faint); }
+.dg-edge { stroke: var(--color-border); stroke-width: 1.5; fill: none; }
+.dg-packet { fill: var(--color-primary); }
+.dg-stage { font-family: var(--font-mono); font-size: 9px; fill: var(--color-text-faint); letter-spacing: .08em; }
+@media (prefers-reduced-motion: reduce) {
+  .dg-packet { display: none; }
+  .cs-overlay, .cs-panel { transition: none; }
+}
+body.cs-locked { overflow: hidden; }

@@ -16,6 +16,7 @@
 
   <link rel="stylesheet" href="./base.css">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./case-studies.css">
 
   <!-- Inline critical: set theme before first paint -->
   <script>
@@ -309,9 +310,10 @@
         <h2 class="section-title">What I've Built</h2>
         <p class="section-subtitle">A mix of AI/ML systems, data science applications, and full-stack engineering.</p>
       </div>
+      <div class="filter-bar" id="projectFilter" aria-live="polite"></div>
       <div class="projects__grid">
 
-        <div class="project-card">
+        <div class="project-card" data-case="kafka-pipeline">
           <div class="project-card__header">
             <div class="project-card__icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/><circle cx="12" cy="14" r="2"/></svg>
@@ -330,9 +332,10 @@
             <span class="tech-badge">Docker</span>
             <span class="tech-badge">NGINX</span>
           </div>
+          <span class="project-card__cta">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-case="mety">
           <div class="project-card__header">
             <div class="project-card__icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/><circle cx="12" cy="14" r="2"/></svg>
@@ -350,9 +353,10 @@
             <span class="tech-badge">Ollama</span>
             <span class="tech-badge">OpenAI</span>
           </div>
+          <span class="project-card__cta">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-case="clearpath">
           <div class="project-card__header">
             <div class="project-card__icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/><circle cx="12" cy="14" r="2"/></svg>
@@ -367,9 +371,10 @@
             <span class="tech-badge">Compliance Automation</span>
             <span class="tech-badge">Full-Stack</span>
           </div>
+          <span class="project-card__cta">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-case="monuments">
           <div class="project-card__header">
             <div class="project-card__icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/><circle cx="12" cy="14" r="2"/></svg>
@@ -384,9 +389,10 @@
             <span class="tech-badge">3D Reconstruction</span>
             <span class="tech-badge">Computer Vision</span>
           </div>
+          <span class="project-card__cta">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-case="defect-detection">
           <div class="project-card__header">
             <div class="project-card__icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/><circle cx="12" cy="14" r="2"/></svg>
@@ -404,6 +410,7 @@
             <span class="tech-badge">PostgreSQL</span>
             <span class="tech-badge">Docker</span>
           </div>
+          <span class="project-card__cta">View case study<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
 
       </div>
@@ -609,5 +616,6 @@
     })();
   </script>
 
+  <script src="./case-studies.js" defer></script>
 </body>
 </html>
