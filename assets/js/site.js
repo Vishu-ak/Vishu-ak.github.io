@@ -26,9 +26,12 @@
     { id: "device", x: 380, y: 395, title: "Bath controllers", sub: "fault-tolerant cycles",
       body: "Fault-tolerant automation: cycles run on the controller itself, so customers' baths keep working through server and network outages, and monitoring flags silent failures.",
       tags: ["Fault tolerance", "Monitoring", "Health checks"] },
-    { id: "ops", x: 120, y: 300, title: "Ops tools & website", sub: "procurement · ETL",
-      body: "Internal tools: the procurement system operations uses daily for materials and purchase orders (replacing spreadsheets), Python ETL jobs that cut manual reporting by around 40%, and the company website.",
-      tags: ["Python", "ETL", "Procurement", "Web"] },
+    { id: "ops", x: 120, y: 285, title: "Ops tools", sub: "procurement · ETL",
+      body: "Internal tools: the procurement system operations uses daily for materials and purchase orders (replacing spreadsheets), and Python ETL jobs that cut manual reporting by about 40%.",
+      tags: ["Python", "ETL", "Procurement"] },
+    { id: "portal", x: 120, y: 395, title: "Trade partner portal", sub: "new partner website",
+      body: "A new website for the company's trade partners, separate from the main company site. It increased business partnerships and sales.",
+      tags: ["Web", "Partner portal", "HTML/CSS/JS"] },
     { id: "cicd", x: 640, y: 330, title: "CI/CD & quality", sub: "GitHub Actions · tests",
       body: "CI/CD with GitHub Actions and automated tests, so every change is checked and deployed the same way.",
       tags: ["GitHub Actions", "CI/CD", "Testing"] },
@@ -292,7 +295,7 @@
       g.setAttribute("role", "button");
       g.setAttribute("aria-label", `${n.title}: ${n.sub}`);
       g.setAttribute("transform", `translate(${n.x - W / 2},${n.y - H / 2})`);
-      g.innerHTML = `<rect width="${W}" height="${H}" rx="12"${n.id === "ops" ? ' stroke-dasharray="5 4"' : ""}></rect>
+      g.innerHTML = `<rect width="${W}" height="${H}" rx="12"${["ops", "portal"].includes(n.id) ? ' stroke-dasharray="5 4"' : ""}></rect>
         <text x="14" y="24">${n.title}</text><text class="sub" x="14" y="42">${n.sub}</text>`;
       g.addEventListener("click", () => select(i));
       g.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(i); } });
